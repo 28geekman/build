@@ -19,6 +19,11 @@ wrapper() {
     sudo mkdir /usr/share/backgrounds
     sudo cp files/arco-wallpaper.jpg /usr/share/backgrounds
     
+    
+
+}
+
+post_install() { # Run this file after starting xinitrc
     echo "[+] Copying config files"
     cp files/config ~/.config/i3/config
 
@@ -27,9 +32,7 @@ wrapper() {
     cp files/config.ini ~/.config/polybar
     cp files/launch.sh ~/.config/polybar
     chmod +x ~/.config/polybar/launch.sh
-
 }
-
 install_tools() {
     echo "[+] Installing tools"
     sudo apt install -y curl wget git unzip net-tools dnsutils python3 python3-pip python3-venv build-essential libssl-dev libffi-dev lsb-release ca-certificates
