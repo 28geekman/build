@@ -30,6 +30,17 @@ wrapper() {
 
 }
 
+install_tools() {
+    sudo apt install -y curl wget git unzip net-tools dnsutils python3 python3-pip python3-venv build-essential libssl-dev libffi-dev lsb-release ca-certificates
+    sudo apt install -y nmap whois ffuf whatweb dnsrecon dig gobuster nikto netcat-traditional
+    sudo apt install -y hydra john hashcat sqlmap enum4linux smbclient cewl onesixtyone nbtscan snmpwalk
+    pip3 install pipx
+    pipx install crackmapexec
+    sudo apt install -y metasploit-framework rlwrap socat
+    sudo chown -R $USER:$USER /opt
+    mkdir /opt/tools
+    
+}
 
 
 
