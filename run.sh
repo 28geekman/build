@@ -31,6 +31,7 @@ wrapper() {
 }
 
 install_tools() {
+    echo "[+] Installing tools"
     sudo apt install -y curl wget git unzip net-tools dnsutils python3 python3-pip python3-venv build-essential libssl-dev libffi-dev lsb-release ca-certificates
     sudo apt install -y nmap whois ffuf whatweb dnsrecon dig gobuster nikto netcat-traditional
     sudo apt install -y hydra john hashcat sqlmap enum4linux smbclient cewl onesixtyone nbtscan snmpwalk
@@ -41,6 +42,9 @@ install_tools() {
     mkdir /opt/tools
     
 }
+
+wrapper
+install_tools
 
 
 
