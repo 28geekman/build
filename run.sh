@@ -36,8 +36,8 @@ post_install() { # Run this file after starting xinitrc
 install_tools() {
     echo "[+] Installing tools"
     sudo apt install -y curl wget git unzip net-tools dnsutils python3 python3-pip python3-venv build-essential libssl-dev libffi-dev lsb-release ca-certificates
-    sudo apt install -y nmap whois ffuf whatweb dnsrecon dig gobuster nikto netcat-traditional
-    sudo apt install -y hydra john hashcat sqlmap smbclient cewl onesixtyone nbtscan snmpwalk
+    sudo apt install -y nmap whois ffuf whatweb gobuster netcat-traditional
+    sudo apt install -y hydra john hashcat sqlmap smbclient cewl onesixtyone nbtscan
     sudo apt install -y  rlwrap socat
     sudo chown -R $USER:$USER /opt
     mkdir /opt/tools
@@ -46,6 +46,7 @@ install_tools() {
 
 wrapper
 install_tools
+#post_install
 
 
 
